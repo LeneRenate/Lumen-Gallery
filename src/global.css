@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+/**
+Green Suggestions
+70e000   9ef01a / 38b000
+538d22  73a942
+
+Earthy Green:
+e9f5db
+cfe1b9
+b5c99a
+97a97c
+87986a
+718355
+**/
+
+:root {
+  --primaryCol: (med)-dark green?
+  --secCol: 
+  --
+  --bgCol: ivory
+}
