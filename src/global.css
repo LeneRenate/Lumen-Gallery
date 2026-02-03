@@ -15,8 +15,27 @@ b5c99a
 **/
 
 :root {
-  --primaryCol: (med)-dark green?
-  --secCol: 
-  --
-  --bgCol: ivory
+  --white: #fff;
+  --white-paper: #fafaf8;
+  --white-ivory: #f6f3ea;
+  --white-warm: #f2f2ee;
+  --white-cool: #f4f6f8;
+  --off-white: #f4f4f0;
+
+  --black: #000;
+  --charcoal-neutral: #333;
+  --charcoal-dark: #2a2a2a;
+  --charcoal-deep: #1f1f1f;
+  --charcoal-warm: #2e2c2a;
+  --charcoal-cool: #2b2f33;
+
+  --grey-16: #d6d6d6;
+  --grey-25: #bfbfbf;
+  --grey-33: #a8a8a8;
+  --grey-50: #808080;
+  --grey-66: #545454;
+  --grey-75: #404040;
+
+  --green-60: #309d87;
+  --green-70: #23b796;
 }
