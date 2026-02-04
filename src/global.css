@@ -38,9 +38,50 @@ b5c99a
 
   --green-60: #309d87;
   --green-70: #23b796;
+
+  --font-sans: "Jost", "Segue UI", "Helvetica Neue", Arial, sans-serif;
+
+  /* Light mode */
+  --Lumen-green: var(--green-60);
+
+  --bg-primary: var(--white-paper);
+  --bg-secondary: var(--white-ivory);
+  --bg-contrast: var(--grey-75);
+
+  --text-primary: var(--charcoal-deep);
+  --text-secondary: var(--charcoal-neutral);
+  --text-muted: var(--grey-50);
+
+  --border: var(--grey-16);
+
+  /* Dark mode */
+  /* --Lumen-green: var(--green-70);
+
+  --bg-primary: var(--charcoal-dark);
+  --bg-secondary: var(--charcoal-cool);
+  --bg-contrast: var(--white-cool);
+
+  --text-primary: var(--off-white);
+  --text-secondary: var(--grey-25);
+  --text-muted: var(--grey-50);
+
+  --border: var(--grey-16); */
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+}
+
+main {
+  background-color: var(--bg-primary);
+  font-family: var(--font-sans);
 }
 
 Link {
+}
+
+.logoLink {
 }
 
 .brandLogo {

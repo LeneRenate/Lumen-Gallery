@@ -4,7 +4,6 @@ import HomePage from "../pages/HomePage";
 import ExhibitionPage from "../pages/ExhibitionPage";
 import AboutPage from "../pages/AboutPage";
 import VisitPage from "../pages/VisitPage";
-import ContactPage from "../pages/ContactPage";
 import ArtistPage from "../pages/ArtistPage";
 import NewsAndEventsPage from "../pages/NewsAndEventsPage";
 import ExhibitionsArchivePage from "../pages/ExhibitionsArchivePage";
@@ -23,7 +22,6 @@ export const router = createBrowserRouter(
         { path: "whats-on", element: <ExhibitionPage /> },
         { path: "about", element: <AboutPage /> },
         { path: "visit", element: <VisitPage /> },
-        { path: "contact", element: <ContactPage /> },
         { path: "artist/:id", element: <ArtistPage /> },
         { path: "news-and-events", element: <NewsAndEventsPage /> },
         { path: "archive", element: <ExhibitionsArchivePage /> },

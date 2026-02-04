@@ -5,9 +5,12 @@ export default function Header() {
   return (
     <>
       <header className={`flex flex-row justify-evenly`}>
-        <Link to="/" className="brandLogo">
-          <img className="LumenIcon" src="" alt="logo" />
-          <img className="LumenName" src="" alt="LUMEN" />
+        <Link to="/" className="logoLink">
+          <div className={`h-7/10 w-60 ${styles.logoWrapper}`}>
+            <img className="brandLogo" src="" alt="LUMEN" />
+            {/* <img className="LumenIcon" src="" alt="logo" />
+          <img className="LumenName" src="" alt="LUMEN" /> */}
+          </div>
         </Link>
         <div className={`flex flex-col justify-evenly`}>
           <div className={`flex flex-row justify-end ${styles.upperRow}`}>
@@ -32,7 +35,7 @@ export default function Header() {
                   <Link to="visit">Visit</Link>
                 </li>
                 <li className={`${styles.listElement}`}>
-                  <Link to="contact">Contact Us</Link>
+                  <Link to="about#contact">Contact Us</Link>
                 </li>
                 <li className={`${styles.listElement}`}>
                   <Link to="about">About</Link>
