@@ -4,46 +4,46 @@ import styles from "../styles/component style/Header.module.css";
 export default function Header() {
   return (
     <>
-      <header className={`flex flex-row justify-evenly`}>
-        <Link to="/" className="logoLink">
-          <div className={`h-7/10 w-60 ${styles.logoWrapper}`}>
-            <img className="brandLogo" src="" alt="LUMEN" />
-            {/* <img className="LumenIcon" src="" alt="logo" />
+      <header className={`flex flex-row justify-evenly items-center p-2`}>
+        <div>
+          <Link to="/" className="logoLink">
+            <div className={`h-7/10 w-60 ${styles.logoWrapper}`}>
+              <img className="brandLogo" src="" alt="LUMEN" />
+              {/* <img className="LumenIcon" src="" alt="logo" />
           <img className="LumenName" src="" alt="LUMEN" /> */}
-          </div>
-        </Link>
-        <div className={`flex flex-col justify-evenly`}>
-          <div className={`flex flex-row justify-end ${styles.upperRow}`}>
-            <label className={`${styles.themeToggle}`}>
-              <input type="checkbox" className={`${styles.themeToggleInput}`} />
-              <span className={`${styles.themeToggleSlider}`} />
-            </label>
-            {/* <label className={`${styles.languageSelect}`}>
+            </div>
+          </Link>
+        </div>
+
+        <div className={`flex flex-row`}>
+          <nav className={`${styles.navbar}`}>
+            <ul className={`flex flex-row mx-4 ${styles.navList}`}>
+              <li className={`${styles.listElement}`}>
+                <Link to="/">Home</Link>
+              </li>
+              <li className={`${styles.listElement}`}>
+                <Link to="whats-on">What's on</Link>
+              </li>
+              <li className={`${styles.listElement}`}>
+                <Link to="visit">Visit</Link>
+              </li>
+              <li className={`${styles.listElement}`}>
+                <Link to="about#contact">Contact Us</Link>
+              </li>
+              <li className={`${styles.listElement}`}>
+                <Link to="about">About</Link>
+              </li>
+              {/* "Us" on contact..? */}
+            </ul>
+          </nav>
+
+          <label className={`${styles.themeToggle}`}>
+            <input type="checkbox" className={`${styles.themeToggleInput}`} />
+            <span className={`${styles.themeToggleSlider}`} />
+          </label>
+          {/* <label className={`${styles.languageSelect}`}>
               <input type="" name="" id="" />
             </label> */}
-          </div>
-          <div className={`${styles.lowerRow}`}>
-            <nav className={`${styles.navbar}`}>
-              <ul className={`flex flex-row ${styles.navList}`}>
-                <li className={`${styles.listElement}`}>
-                  <Link to="/">Home</Link>
-                </li>
-                <li className={`${styles.listElement}`}>
-                  <Link to="whats-on">What's on</Link>
-                </li>
-                <li className={`${styles.listElement}`}>
-                  <Link to="visit">Visit</Link>
-                </li>
-                <li className={`${styles.listElement}`}>
-                  <Link to="about#contact">Contact Us</Link>
-                </li>
-                <li className={`${styles.listElement}`}>
-                  <Link to="about">About</Link>
-                </li>
-                {/* "Us" on contact..? */}
-              </ul>
-            </nav>
-          </div>
         </div>
       </header>
     </>

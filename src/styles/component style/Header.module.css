@@ -9,8 +9,23 @@ header {
   background-color: lemonchiffon;
 }
 
-.upperRow {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.navbar {
+}
+
+.navList {
+  gap: 1rem;
+}
+
+.listElement {
+  font-weight: 500;
+  background-color: var(--bg-contrast);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.06rem;
+  padding: 0.33rem;
 }
 
 .themeToggle {
@@ -68,21 +83,3 @@ header {
 
 /* .languageSelect {
 } */
-
-.lowerRow {
-}
-
-.navbar {
-}
-
-.navList {
-  gap: 2rem;
-}
-
-.listElement {
-  font-weight: 500;
-  padding: 0.5rem;
-  background-color: var(--bg-contrast);
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
