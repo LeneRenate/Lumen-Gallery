@@ -1,4 +1,4 @@
-import LumenMap from "../assets/mapLumen.png";
+import LumenMap from "../assets/mapLumen.webp";
 
 export const galleryInfo = {
   name: "Lumen",

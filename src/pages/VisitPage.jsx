@@ -1,6 +1,6 @@
 import { galleryInfo } from "../data/galleryInfo";
 import styles from "../styles/page style/VisitPage.module.css";
-import entranceImage from "../assets/EntranceLumen.png";
+import entranceImage from "../assets/entranceLumen.webp";
 
 export default function VisitPage() {
   const { personalItems, photography, touchingArt, children, foodDrink } =
@@ -10,7 +10,9 @@ export default function VisitPage() {
     <>
       <h1 className={`my-6 ml-8 ${styles.visitHeading}`}>Where to find us</h1>
 
+      {/* Info Grid */}
       <section className={`w-9/10 grid grid-cols-2 ${styles.visitGrid}`}>
+        {/* Basic info -  grid-area: info*/}
         <section className={`flex flex-col gap-4 ${styles.visitInfo}`}>
           <article className={`${styles.visitInfoElement}`}>
             <h2>Opening Hours</h2>
@@ -35,6 +37,8 @@ export default function VisitPage() {
           </article>
         </section>
 
+        {/* Pic from the gallery - Entrance?
+        grid-area: image*/}
         <figure className={`${styles.visitImg}`}>
           <img src={entranceImage} alt="Our entrance" className={`h-full`} />
         </figure>
