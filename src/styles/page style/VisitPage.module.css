@@ -1,0 +1,36 @@
+.visitHeading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.visitGrid {
+  background-color: blueviolet;
+}
+
+.visitInfo {
+  background-color: grey;
+}
+
+.visitInfoElement {
+}
+
+.visitImg {
+}
+
+.visitMap {
+  cursor: pointer;
+}
+
+.visitAddress {
+  background-color: seagreen;
+  font-style: normal;
+}
+
+.visitNotes {
+  background-color: pink;
+}
+
+.visitNotes p {
+  margin-bottom: 0.5rem;
+}

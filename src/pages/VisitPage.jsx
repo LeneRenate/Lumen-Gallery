@@ -1,50 +1,79 @@
+import { galleryInfo } from "../data/galleryInfo";
+import styles from "../styles/page style/VisitPage.module.css";
+import entranceImage from "../assets/EntranceLumen.png";
+
 export default function VisitPage() {
-  return <></>;
+  const { personalItems, photography, touchingArt, children, foodDrink } =
+    galleryInfo.additionalNotes;
+
+  return (
+    <>
+      <h1 className={`my-6 ml-8 ${styles.visitHeading}`}>Where to find us</h1>
+
+      <section className={`w-9/10 grid grid-cols-2 ${styles.visitGrid}`}>
+        <section className={`flex flex-col gap-4 ${styles.visitInfo}`}>
+          <article className={`${styles.visitInfoElement}`}>
+            <h2>Opening Hours</h2>
+            {/* Make into grid? Day col 1, Hours col 2 */}
+            {Object.entries(galleryInfo.openingHours).map(([day, hours]) => (
+              <p key={day}>
+                {day}: {hours}
+              </p>
+            ))}
+          </article>
+
+          <article className={`${styles.visitInfoElement}`}>
+            <h2>Admission</h2>
+            <p>{galleryInfo.admission}</p>
+          </article>
+
+          <article className={`${styles.visitInfoElement}`}>
+            <h2>Accessibility</h2>
+            {galleryInfo.accessibility.map((info, index) => (
+              <p key={index}>{info}</p>
+            ))}
+          </article>
+        </section>
+
+        <figure className={`${styles.visitImg}`}>
+          <img src={entranceImage} alt="Our entrance" className={`h-full`} />
+        </figure>
+
+        <figure className={`max-w-lg h-auto ${styles.visitMap}`}>
+          <img
+            src={galleryInfo.map}
+            alt="map showing the location of Lumen in York"
+            title="Go to full screen map"
+          />
+        </figure>
+
+        <address className={`${styles.visitAddress}`}>
+          <p>Where to find us:</p>
+          {Object.entries(galleryInfo.address)
+            .filter(([key]) => key !== "country")
+            .map(([key, value], index) => (
+              <p key={index}>{value}</p>
+            ))}
+          <br />
+          {Object.entries(galleryInfo.transport).map(([mean, how]) => (
+            <p key={mean} className={`mb-2`}>
+              By {mean}:
+              <br />
+              {how}
+            </p>
+          ))}
+        </address>
+
+        <section className={`${styles.visitNotes}`}>
+          <p>Additional notes:</p>
+          {/* Activate as needed */}
+          <p>{personalItems}</p>
+          <p>{photography}</p>
+          <p>{touchingArt}</p>
+          <p>{children}</p>
+          <p>{foodDrink}</p>
+        </section>
+      </section>
+    </>
+  );
 }
-
-/** 
-Gallery Address (Fictional but Believable)
-
-LUMEN
-18 Tanner’s Yard
-York YO1 8QT
-United Kingdom
-
-Why this works
-- “Yard” and small-number streets are common in historic York
-- YO1 is central York
-- Postcode format is valid, but the exact address is not traceable
-
-Phone Number (York Area Code)
-Telephone
-+44 (0)1904 612 487
-
-Notes:
-- 01904 is the real York area code
-- Number range is plausible
-- Uses standard UK formatting
-- Getting There (Accurate to York)
-
-Public Transport
-
-York does not have an underground or metro system.
-
-By train
-York railway station is a major national hub, with direct services from London, Leeds, Manchester, and Edinburgh.
-From York Station, the gallery is approximately a 15–20 minute walk or a short bus journey.
-
-By bus
-York is served by an extensive local bus network. Several city-centre routes stop within walking distance of the gallery.
-
-On Foot
-
-The city centre is compact and largely walkable. Many visitors reach the gallery on foot from the station or nearby cultural sites.
-
-Accessibility Note (Optional but Realistic)
-
-The gallery is located on ground level with step-free access from the street.
-
-Short “Visit” Copy Version (If You Need It Later)
-
-LUMEN is located in central York, within walking distance of the railway station. The gallery is easily reached on foot or by local bus services. York does not operate an underground system.
-**/
