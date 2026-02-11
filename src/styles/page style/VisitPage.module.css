@@ -8,13 +8,24 @@
   padding: 1rem;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1.2fr;
+  column-gap: 1.5rem;
+  row-gap: 3rem;
 
   grid-template-areas:
     "info entranceImg"
     "map address"
-    "insideImg notes";
+    "notes insideImg";
+}
+
+.visitGrid h2 {
+  font-size: 1.25rem;
+}
+
+.visitGrid img {
+  border-radius: 5px;
+  box-shadow: 0 0 4px var(--bg-contrast);
+  /* box-shadow: 2px 2px 2px var(--bg-contrast); */
 }
 
 .visitInfo {
@@ -24,8 +35,8 @@
 .visitInfoElement {
 }
 
-.visitInfoElement h2 {
-  font-size: 1.25rem;
+.visitInfoElement p {
+  margin-left: 0.5rem;
 }
 
 .visitEntranceImg {
@@ -34,9 +45,12 @@
 
 .visitMap {
   cursor: pointer;
-  aspect-ratio: 1 / 1;
 
   grid-area: map;
+}
+
+.visitMapImg {
+  aspect-ratio: 1 / 1;
 }
 
 .visitAddress {
@@ -45,16 +59,17 @@
   grid-area: address;
 }
 
-.visitInsideImg {
-  grid-area: insideImg;
-}
-
 .visitNotes {
-  background-color: pink;
-
   grid-area: notes;
+
+  color: var(--text-secondary);
 }
 
 .visitNotes p {
-  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.visitInsideImg {
+  grid-area: insideImg;
 }

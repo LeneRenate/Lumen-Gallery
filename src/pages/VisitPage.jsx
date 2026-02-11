@@ -1,6 +1,7 @@
 import { galleryInfo } from "../data/galleryInfo";
 import styles from "../styles/page style/VisitPage.module.css";
 import entranceImage from "../assets/entranceLumen.webp";
+import insideImage from "../assets/insideLumen.webp";
 
 export default function VisitPage() {
   const { personalItems, photography, touchingArt, children, foodDrink } =
@@ -13,10 +14,11 @@ export default function VisitPage() {
       {/* Info Grid */}
       <section className={` ${styles.visitGrid}`}>
         {/* Basic info -  grid-area: info*/}
-        <section className={`flex flex-col gap-4 ${styles.visitInfo}`}>
+        <section className={`flex flex-col gap-4 pl-6 ${styles.visitInfo}`}>
           <article className={`${styles.visitInfoElement}`}>
             <h2>Opening Hours</h2>
-            {/* Make into grid? Day col 1, Hours col 2 */}
+            {/* Make into grid? Day col 1, Hours col 2
+             */}
             {Object.entries(galleryInfo.openingHours).map(([day, hours]) => (
               <p key={day}>
                 {day}: {hours}
@@ -45,26 +47,30 @@ export default function VisitPage() {
 
         {/* Map to Lumen / img
         grid-area: map */}
-        <figure className={`max-w-lg h-auto ${styles.visitMap}`}>
+        <figure
+          className={`flex justify-center items-center ${styles.visitMap}`}
+        >
           <img
             src={galleryInfo.map}
             alt="map showing the location of Lumen in York"
             title="Go to full screen map"
+            className={`max-w-lg h-auto ${styles.visitMapImg}`}
           />
         </figure>
 
         {/* Address and directions
         grid-area: address */}
-        <address className={`${styles.visitAddress}`}>
-          <p>Where to find us:</p>
+        <address className={`pt-10 pr-10 pl-4 ${styles.visitAddress}`}>
+          <h2>Where to find us</h2>
           {Object.entries(galleryInfo.address)
             .filter(([key]) => key !== "country")
             .map(([key, value], index) => (
               <p key={index}>{value}</p>
             ))}
           <br />
+          <h2>How to find us</h2>
           {Object.entries(galleryInfo.transport).map(([mean, how]) => (
-            <p key={mean} className={`mb-2`}>
+            <p key={mean} className={`mb-4`}>
               By {mean}:
               <br />
               {how}
@@ -72,20 +78,10 @@ export default function VisitPage() {
           ))}
         </address>
 
-        {/* Pic from inside the gallery?
-        grid-area:  insideImg*/}
-        <figure>
-          <img
-            src="hcdks"
-            alt="From inside the gallery"
-            className={`${styles.visitInsidemg}`}
-          />
-        </figure>
-
         {/* Additional notes
         grid-area: notes */}
-        <section className={`${styles.visitNotes}`}>
-          <p>Additional notes:</p>
+        <section className={`pt-10 pr-4 pl-6 ${styles.visitNotes}`}>
+          <h2 className={`mb-2`}>Additional notes:</h2>
           {/* Activate as needed */}
           <p>{personalItems}</p>
           <p>{photography}</p>
@@ -93,6 +89,16 @@ export default function VisitPage() {
           <p>{children}</p>
           <p>{foodDrink}</p>
         </section>
+
+        {/* Pic from inside the gallery?
+        grid-area:  insideImg*/}
+        <figure>
+          <img
+            src={insideImage}
+            alt="From inside the gallery"
+            className={`${styles.visitInsidemg}`}
+          />
+        </figure>
       </section>
     </>
   );
