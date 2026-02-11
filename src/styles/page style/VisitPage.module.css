@@ -5,30 +5,54 @@
 }
 
 .visitGrid {
-  background-color: blueviolet;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  grid-template-areas:
+    "info entranceImg"
+    "map address"
+    "insideImg notes";
 }
 
 .visitInfo {
-  background-color: grey;
+  grid-area: info;
 }
 
 .visitInfoElement {
 }
 
-.visitImg {
+.visitInfoElement h2 {
+  font-size: 1.25rem;
+}
+
+.visitEntranceImg {
+  grid-area: entranceImg;
 }
 
 .visitMap {
   cursor: pointer;
+  aspect-ratio: 1 / 1;
+
+  grid-area: map;
 }
 
 .visitAddress {
-  background-color: seagreen;
   font-style: normal;
+
+  grid-area: address;
+}
+
+.visitInsideImg {
+  grid-area: insideImg;
 }
 
 .visitNotes {
   background-color: pink;
+
+  grid-area: notes;
 }
 
 .visitNotes p {

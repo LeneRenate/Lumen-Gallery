@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/component style/Header.module.css";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -40,10 +41,7 @@ export default function Header() {
           </div>
 
           <div className={`flex justify-end`}>
-            <label className={`${styles.themeToggle}`}>
-              <input type="checkbox" className={`${styles.themeToggleInput}`} />
-              <span className={`${styles.themeToggleSlider}`} />
-            </label>
+            <ThemeToggle />
             {/* <label className={`${styles.languageSelect}`}>
               <input type="" name="" id="" />
             </label> */}

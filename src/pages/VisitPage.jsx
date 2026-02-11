@@ -11,7 +11,7 @@ export default function VisitPage() {
       <h1 className={`my-6 ml-8 ${styles.visitHeading}`}>Where to find us</h1>
 
       {/* Info Grid */}
-      <section className={`w-9/10 grid grid-cols-2 ${styles.visitGrid}`}>
+      <section className={` ${styles.visitGrid}`}>
         {/* Basic info -  grid-area: info*/}
         <section className={`flex flex-col gap-4 ${styles.visitInfo}`}>
           <article className={`${styles.visitInfoElement}`}>
@@ -38,11 +38,13 @@ export default function VisitPage() {
         </section>
 
         {/* Pic from the gallery - Entrance?
-        grid-area: image*/}
-        <figure className={`${styles.visitImg}`}>
+        grid-area: entranceImg*/}
+        <figure className={`${styles.visitEntranceImg}`}>
           <img src={entranceImage} alt="Our entrance" className={`h-full`} />
         </figure>
 
+        {/* Map to Lumen / img
+        grid-area: map */}
         <figure className={`max-w-lg h-auto ${styles.visitMap}`}>
           <img
             src={galleryInfo.map}
@@ -51,6 +53,8 @@ export default function VisitPage() {
           />
         </figure>
 
+        {/* Address and directions
+        grid-area: address */}
         <address className={`${styles.visitAddress}`}>
           <p>Where to find us:</p>
           {Object.entries(galleryInfo.address)
@@ -68,6 +72,18 @@ export default function VisitPage() {
           ))}
         </address>
 
+        {/* Pic from inside the gallery?
+        grid-area:  insideImg*/}
+        <figure>
+          <img
+            src="hcdks"
+            alt="From inside the gallery"
+            className={`${styles.visitInsidemg}`}
+          />
+        </figure>
+
+        {/* Additional notes
+        grid-area: notes */}
         <section className={`${styles.visitNotes}`}>
           <p>Additional notes:</p>
           {/* Activate as needed */}
