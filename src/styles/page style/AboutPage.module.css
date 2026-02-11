@@ -1,0 +1,15 @@
+.aboutHeading {
+  font-size: 3rem;
+}
+
+.aboutArticle {
+  color: var(--text-primary);
+}
+
+.aboutArticle h2 {
+  font-size: 1.25rem;
+}
+
+.aboutArticle p {
+  font-size: 1rem;
+}

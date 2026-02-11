@@ -1,11 +1,22 @@
+import ContactForm from "../components/ContactForm";
+import { aboutLumen } from "../data/aboutLumen";
+import styles from "../styles/page style/AboutPage.module.css";
+
 export default function AboutPage() {
   return (
     <>
-      <section>
-        <h1>LUMEN</h1>
+      <section className={``}>
+        <h1 className={`my-4 ml-8 ${styles.aboutHeading}`}>LUMEN</h1>
+        {aboutLumen.map((a) => (
+          <article className={`ml-16 mt-8 w-3/4 ${styles.aboutArticle}`}>
+            <h2 className={`mb-2`}>{a.title}</h2>
+            <p className={``}>{a.body}</p>
+          </article>
+        ))}
       </section>
-      <section id="contact">
-        <h2>Contact us</h2>
+      <section id="contact" className={``}>
+        <h2 className={``}>Contact us</h2>
+        <ContactForm />
       </section>
     </>
   );
