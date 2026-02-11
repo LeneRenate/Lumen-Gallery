@@ -13,3 +13,8 @@
 .aboutArticle p {
   font-size: 1rem;
 }
+
+.aboutContactForm {
+  background-color: var(--bg-muted);
+  border: 2px solid var(--border);
+}

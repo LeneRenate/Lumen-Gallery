@@ -14,8 +14,10 @@ export default function AboutPage() {
           </article>
         ))}
       </section>
-      <section id="contact" className={``}>
-        <h2 className={``}>Contact us</h2>
+      <section
+        id="contact"
+        className={`my-10 ml-16 p-4 rounded ${styles.aboutContactForm}`}
+      >
         <ContactForm />
       </section>
     </>
