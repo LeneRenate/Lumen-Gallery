@@ -1,13 +1,21 @@
 form {
 }
 
+div {
+  display: flex;
+  flex-direction: row;
+}
+
 label {
   font-size: 1rem;
 }
 
-div {
-  display: flex;
-  flex-direction: row;
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: white;
+  border: 0.5px solid var(--grey-75);
+  width: 300px;
 }
 
 option {

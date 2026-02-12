@@ -1,8 +1,25 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
 import { aboutLumen } from "../data/aboutLumen";
 import styles from "../styles/page style/AboutPage.module.css";
 
 export default function AboutPage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       <section className={``}>
@@ -23,5 +40,3 @@ export default function AboutPage() {
     </>
   );
 }
-
-// Note: If the auto-scroll doesn't work reliably when navigating from other pages, you may need to add a useEffect hook in AboutPage.jsx to manually scroll to the hash location after the component mounts.

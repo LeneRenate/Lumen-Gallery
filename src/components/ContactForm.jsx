@@ -3,20 +3,20 @@ export default function ContactForm() {
     <>
       <form className={`flex flex-col p-2`}>
         <div>
-          <label for="contactSubject"></label>
-          <input type="text" id="contactSubject" />
+          <label for="contactSubject">Subject:</label>
+          <input type="text" id="contactSubject" required />
         </div>
 
         <div>
-          <label for="contactEmail"></label>
-          <input type="email" name="" id="contactEmail" />
+          <label for="contactEmail">E-mail:</label>
+          <input type="email" name="" id="contactEmail" required />
         </div>
 
         <div>
           <label for="contactForWho"></label>
           <select id="contactForWho" name="subject" required>
             <option value="" disabled selected>
-              Please select a subject
+              Please select a category
             </option>
 
             <option value="general">General Enquiry</option>
@@ -38,11 +38,11 @@ export default function ContactForm() {
 
         <div>
           <label for=""></label>
-          <textarea name="" id=""></textarea>
+          <textarea name="" id="" placeholder="" required></textarea>
         </div>
 
         <div>
-          <input type="submit" value="" />
+          <input type="submit" value="Submit" />
         </div>
       </form>
     </>
