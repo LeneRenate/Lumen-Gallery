@@ -1,7 +1,9 @@
+import styles from "../styles/component style/ContactForm.module.css";
+
 export default function ContactForm() {
   return (
     <>
-      <form className={`flex flex-col p-2`}>
+      <form className={`flex flex-col p-2 gap-4 ${styles.contactForm}`}>
         <div>
           <label for="contactSubject">Subject:</label>
           <input type="text" id="contactSubject" required />
@@ -13,8 +15,13 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label for="contactForWho"></label>
-          <select id="contactForWho" name="subject" required>
+          <label for="contactForWho">Category: </label>
+          <select
+            id="contactForWho"
+            className={`italic`}
+            name="subject"
+            required
+          >
             <option value="" disabled selected>
               Please select a category
             </option>
@@ -42,7 +49,8 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <input type="submit" value="Submit" />
+          <button type="submit">Send</button>
+          {/* For a real site, this would obviously have a onClick-function that sends the enquiry as an email to the right person/unit's email-address */}
         </div>
       </form>
     </>

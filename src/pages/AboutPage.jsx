@@ -8,9 +8,9 @@ export default function AboutPage() {
   const location = useLocation();
 
   useEffect(() => {
-    // Check if there's a hash in the URL
+    // Looking for hash in URL
     if (location.hash) {
-      // Small delay to ensure the page has rendered
+      // Delay to render page
       setTimeout(() => {
         const element = document.querySelector(location.hash);
         if (element) {
@@ -31,9 +31,11 @@ export default function AboutPage() {
           </article>
         ))}
       </section>
+
+      {/* ContactForm */}
       <section
         id="contact"
-        className={`my-10 ml-16 p-4 rounded ${styles.aboutContactForm}`}
+        className={`my-10 ml-16 p-4 rounded-sm ${styles.aboutContactForm}`}
       >
         <ContactForm />
       </section>

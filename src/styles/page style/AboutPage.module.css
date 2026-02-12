@@ -15,6 +15,6 @@
 }
 
 .aboutContactForm {
-  background-color: var(--bg-muted);
+  background-color: var(--bg-secondary);
   border: 2px solid var(--border);
 }

@@ -1,9 +1,10 @@
 form {
 }
 
-div {
+form div {
   display: flex;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
 label {
@@ -12,13 +13,32 @@ label {
 
 input[type="text"],
 input[type="email"],
-textarea {
+select {
   background-color: white;
-  border: 0.5px solid var(--grey-75);
+  border: 0.25px solid var(--grey-75);
   width: 300px;
+}
+
+select {
 }
 
 option {
   color: var(--text-secondary);
   font-size: 0.75rem;
+  background-color: white;
+}
+
+textarea {
+  background-color: white;
+  border: 0.5px solid var(--grey-75);
+  width: 500px;
+  height: 10rem;
+}
+
+button {
+  background-color: var(--Lumen-green);
+  color: var(--text-contrast);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
