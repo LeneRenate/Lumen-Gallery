@@ -29,5 +29,9 @@ header {
   box-shadow: 0 0 2px var(--bg-contrast); */
 }
 
+.todaysHours {
+  font-size: 0.875rem;
+}
+
 /* .languageSelect {
 } */

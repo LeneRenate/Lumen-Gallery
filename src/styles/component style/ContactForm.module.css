@@ -20,6 +20,7 @@ select {
 }
 
 select {
+  font-style: italic;
 }
 
 option {
@@ -39,6 +40,6 @@ button {
   background-color: var(--Lumen-green);
   color: var(--text-contrast);
   margin-top: 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 10px;
 }

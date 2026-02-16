@@ -6,22 +6,23 @@ export default function ContactForm() {
       <form className={`flex flex-col p-2 gap-4 ${styles.contactForm}`}>
         <div>
           <label for="contactSubject">Subject:</label>
-          <input type="text" id="contactSubject" required />
+          <input type="text" id="contactSubject" placeholder="" required />
         </div>
 
         <div>
           <label for="contactEmail">E-mail:</label>
-          <input type="email" name="" id="contactEmail" required />
+          <input
+            type="email"
+            name=""
+            id="contactEmail"
+            placeholder="Your email"
+            required
+          />
         </div>
 
         <div>
           <label for="contactForWho">Category: </label>
-          <select
-            id="contactForWho"
-            className={`italic`}
-            name="subject"
-            required
-          >
+          <select id="contactForWho" name="subject" required>
             <option value="" disabled selected>
               Please select a category
             </option>
@@ -45,7 +46,12 @@ export default function ContactForm() {
 
         <div>
           <label for=""></label>
-          <textarea name="" id="" placeholder="" required></textarea>
+          <textarea
+            name=""
+            id=""
+            placeholder="Your message..."
+            required
+          ></textarea>
         </div>
 
         <div>

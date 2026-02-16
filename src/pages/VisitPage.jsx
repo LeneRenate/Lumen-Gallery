@@ -19,11 +19,15 @@ export default function VisitPage() {
             <h2>Opening Hours</h2>
             {/* Make into grid? Day col 1, Hours col 2
              */}
-            {Object.entries(galleryInfo.openingHours).map(([day, hours]) => (
+            {/* {Object.entries(galleryInfo.openingHours).map(([day, hours]) => (
               <p key={day}>
                 {day}: {hours}
               </p>
-            ))}
+            ))} */}
+            <p>Monday: closed</p>
+            <p>Tuesday - Thursday: 10am - 6pm</p>
+            <p>Friday: 10am - 8pm</p>
+            <p>Saturday & Sunday: 11am - 6pm</p>
           </article>
 
           <article className={`${styles.visitInfoElement}`}>

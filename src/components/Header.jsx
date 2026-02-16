@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/component style/Header.module.css";
 import ThemeToggle from "./ThemeToggle";
+import { galleryInfo } from "../data/galleryInfo";
 
 export default function Header() {
+  const getTodaysHours = () => {
+    const days = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ];
+    const today = days[new Date().getDay()];
+    return galleryInfo.openingHours[today];
+  };
+
   return (
     <>
       <header className={`flex flex-row justify-around items-center p-2`}>
@@ -40,7 +55,10 @@ export default function Header() {
             </nav>
           </div>
 
-          <div className={`flex justify-end`}>
+          <div className={`flex justify-end items-center gap-8`}>
+            <span className={`${styles.todaysHours}`}>
+              Today: {getTodaysHours()}
+            </span>
             <ThemeToggle />
             {/* <label className={`${styles.languageSelect}`}>
               <input type="" name="" id="" />
